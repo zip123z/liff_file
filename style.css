@@ -1,0 +1,145 @@
+/* 基本樣式 */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+h1 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/* 上傳區域 */
+#uploadSection {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+#uploadBtn {
+  background-color: #00b900;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+#uploadBtn:hover {
+  background-color: #009900;
+}
+
+/* 文件列表 */
+#fileList {
+  margin-top: 20px;
+}
+
+#files {
+  list-style: none;
+  padding: 0;
+}
+
+.file-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.file-name {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.file-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.file-action-btn {
+  padding: 5px 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.file-action-btn.view {
+  background-color: #007bff;
+  color: white;
+}
+
+.file-action-btn.download {
+  background-color: #28a745;
+  color: white;
+}
+
+.file-action-btn:hover {
+  opacity: 0.9;
+}
+
+/* 圖片預覽 */
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+
+/* 響應式設計 */
+@media (max-width: 600px) {
+  .container {
+    padding: 10px;
+  }
+  
+  .file-item {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .file-actions {
+    width: 100%;
+    justify-content: flex-end;
+    margin-top: 10px;
+  }
+}
+
+/* 提示信息 */
+.toast {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 12px 24px;
+  border-radius: 4px;
+  color: white;
+  animation: fadeIn 0.3s;
+}
+
+.toast.success {
+  background-color: #28a745;
+}
+
+.toast.error {
+  background-color: #dc3545;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.hidden {
+  display: none;
+}

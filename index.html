@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LIFF 文件上傳</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>文件管理</h1>
+    
+    <!-- 上傳按鈕 (根據權限顯示) -->
+    <div id="uploadSection" class="hidden">
+      <form id="uploadForm" enctype="multipart/form-data">
+        <input type="file" id="fileInput" name="files" multiple>
+        <button type="submit" id="uploadBtn">上傳文件</button>
+      </form>
+    </div>
+
+    <!-- 文件列表 -->
+    <div id="fileList">
+      <h2>已上傳文件</h2>
+      <ul id="files"></ul>
+    </div>
+  </div>
+
+  <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+  <script src="/js/app.js"></script>
+</body>
+</html>
